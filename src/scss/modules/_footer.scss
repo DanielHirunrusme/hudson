@@ -1,0 +1,57 @@
+footer {
+	//@include flexbox;
+	//@include justify-content(space-between);
+	padding:$g-tb-margin*2 $g-lr-margin $g-tb-margin/2 $g-lr-margin;
+	
+	.copyright {
+		p {
+			@extend %uc;
+			
+			* {
+				font-size:inherit;
+			}
+		}
+	}
+	
+	.social {
+		margin:$g-tb-margin*2 0;
+		text-align:center;
+		
+		a {
+			@include opacity(.5);
+			display:inline-block;
+			@extend %uc;
+			width:30px;
+			height:30px;
+			margin:0 $g-lr-margin/4;
+			
+			&:hover {
+				@include opacity(1);
+			}
+			
+			
+			img, svg {
+				width:100%;
+			}
+			
+			&:first-child {
+				svg {
+					width:95%;
+				}
+			}
+		}
+	}
+	
+	.address {
+		
+		text-align:center;
+		
+		* {
+			display:inline-block;
+			margin:0 $g-lr-margin/4;
+			@extend %uc;
+		}
+		
+	}
+	
+}

@@ -1,0 +1,17 @@
+.client-list {
+	
+	li {
+		width:20%;
+		display:inline-block;
+		float:left;
+		
+		@include respond-to(mobile-portrait) {
+			width:50%;
+		}
+		
+		img {
+			width:100%;
+		}
+	}
+	
+}

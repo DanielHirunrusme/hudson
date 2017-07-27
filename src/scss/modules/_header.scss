@@ -1,0 +1,35 @@
+header {
+	@include transition($transition-duration transform);
+	position:fixed;
+	width:100%;
+	left:0;
+	top:0;
+	z-index:10;
+	background:$c-background;
+	
+	&.hero-menu {
+		background:transparent;
+		
+		a {
+			color:$c-white;
+		}
+	}
+	
+	&.hidden {
+		@include transform(translate(0, -100px));
+	}
+}
+
+.project {
+	header {
+		//background:$c-white;
+		
+		&.hero-menu {
+			background:transparent;
+		
+			a {
+				color:$c-white;
+			}
+		}
+	}
+}

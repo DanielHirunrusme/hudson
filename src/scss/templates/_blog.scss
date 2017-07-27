@@ -1,0 +1,142 @@
+
+
+#blog {
+	
+	position:absolute;
+	top:200%;
+	width:100%;
+	height:100%;
+	
+	
+	#pagination {
+		
+	    position: absolute;
+	    bottom: 0;
+		text-align:center;
+		width:100%;
+		z-index:2;
+		background:#fff;
+		
+		button {
+			display:inline-block;
+			padding:15px 8px 20px 8px;
+			background:none;
+			border:none;
+			letter-spacing: .15em !important;
+			text-transform:uppercase;
+			
+			&.active {
+				text-decoration:underline;
+			}
+		}
+		
+	}
+	
+	.next.disabled, .back.disabled {
+		@include opacity(0);
+		cursor:default;
+	}
+	
+	.posts {
+		@include opacity(0);
+		position:absolute;
+		top:0; left:0;
+		width:100%;
+		
+		.post {
+			
+			
+			width: 60vw;
+			margin: 0 auto;
+			margin-bottom:100px;
+			max-width:1000px;
+			
+			@include break(phone) {
+				width:100%;
+				width: calc(100% - 23px);
+				margin-bottom:50px;
+			}
+			
+			&:first-child {
+				margin-top:100px;
+			}
+			
+			&:last-child {
+				
+			}
+			
+			p {
+				text-transform:uppercase;
+				letter-spacing: .15em !important;
+				margin-left:10px;
+				
+				@include break(phone) {
+					margin-left:4px;
+				}
+			}
+			
+			.post-date {
+				//margin-bottom:20px;
+			}
+			
+			.post-row {
+				@include flexbox;
+				@include flex-direction(row);
+				
+				&:nth-of-type(1) {
+					margin-top:10px;
+				}
+				
+				&.has-caption {
+					margin-bottom:20px;
+				}
+				
+				div {
+					@include flex(1);
+					background-size:cover;
+					background-position:center center;
+					margin:10px;
+					position:relative;
+					
+					@include break(phone) {
+						margin:4px;
+					}
+					
+					&.has-caption {
+						//margin-bottom:30px;
+					}
+					
+					.caption {
+					    top: 100%;
+					    margin-top: 8px;
+						left:-10px;
+						text-transform:none;
+						letter-spacing: .05em !important;
+						
+						@include break(phone) {
+						    top: 100%;
+						    margin-top: 5px;
+							left:-4px;
+						}
+					}
+					
+					
+					
+					img {
+						@include opacity(0);
+						width:100%;
+					}
+				}
+			}
+		}
+	}
+	
+}
+
+.studio #blog {
+	top:100%;
+}
+
+.blog #blog {
+	top:0;
+}

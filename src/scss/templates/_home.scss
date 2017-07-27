@@ -1,0 +1,58 @@
+.home-hero {
+	
+	//@extend %containerPadding;
+	
+	padding:0 $g-lr-margin;
+	@include flexbox;
+	@include flex-direction(column);
+	@include justify-content(center);
+	@include align-content(center);
+	
+	min-height:300px;
+	height:100vh;
+	text-align:left;
+	
+	@include respond-to(mobile-portrait) {
+		padding:0 $g-lr-margin/2;
+	}
+	
+	
+	h1 {
+		text-transform:none;
+		@extend %heroText;
+		color:$c-white;
+	    max-width: 680px;
+		
+	}
+	
+	
+	a, p a {
+		@extend %whiteLink;
+	}
+	
+	.home-slideshow {
+		position:absolute;
+		height:100%;
+		left:0;
+		top:0;
+		width:100vw;
+		z-index:-1;
+		
+		.home-slideshow-image {
+			@include transition($transition-duration opacity);
+			position:absolute;
+			height:100%;
+			left:0;
+			top:0;
+			width:100%;
+			background-size:cover;
+			background-position:center center;
+			@include opacity(0);
+			
+			&.active {
+				@include opacity(1);
+			}
+		}
+	}
+	
+}

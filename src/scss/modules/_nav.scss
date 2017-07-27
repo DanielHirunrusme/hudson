@@ -1,0 +1,30 @@
+.logo {
+	@extend %uc;
+	padding-left:$g-lr-margin;
+	padding-top:$g-tb-margin/2;
+	display:block;
+	float:left;
+	
+	@include respond-to(mobile-portrait) {
+		padding-left:$g-lr-margin/2;
+	}
+}
+
+nav {
+	float:right;
+	margin-right:$g-lr-margin;
+	
+	ul {
+		li {
+			display:inline-block;
+			
+			a {
+				@extend %uc;
+				padding-top:$g-tb-margin/2;
+				display:block;
+				margin-left:$g-lr-margin/3;
+				padding-bottom:$g-tb-margin/2;
+			}
+		}
+	}
+}
