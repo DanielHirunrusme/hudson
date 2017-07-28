@@ -22,12 +22,12 @@
 		</article>
 		
 		<article class="home-about">
-			<h2><?php echo $page->about_title()->kirbytext() ?></h2>
+			<h2><?php echo $page->about_title()->text() ?></h2>
 			<?php echo $page->about()->kirbytext() ?>
 		</article>
 	
 		<article class="home-careers">
-			<h2><?php echo $page->careers_title()->kirbytext() ?></h2>
+			<h2><?php echo $page->careers_title()->text() ?></h2>
 			<?php echo $page->careers()->kirbytext() ?>
 		</article>
 	</section>

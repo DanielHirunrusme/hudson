@@ -1,0 +1,17 @@
+.instagram-module {
+	margin-bottom:$g-tb-margin * 3 !important;
+	
+	#instafeed {
+		width:220px;
+		height:220px;
+		position:relative;
+		overflow:hidden;
+		margin:0 auto;
+		margin-bottom:$g-tb-margin/4;
+		
+		img {
+			position:absolute;
+		}
+	}
+	
+}

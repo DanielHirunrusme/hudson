@@ -7,11 +7,24 @@ module.exports = function( el ) {
 	
 	var feed = new Instafeed({
 	        get: 'user',
-	        userId: '5439801',
-	        clientId: '6ed34b4b3be94240810a7111ede3a4f9',
-			accessToken: '5439801.1677ed0.a9079583b03b4f6a8c572e0f25409665'
+	        userId: '1731750240',
+	        clientId: '1254d491b8414666ad42e69871538253',
+			accessToken: '1731750240.1677ed0.8d2f6531f29f41c0842e46e98f9ad157',
+			template: '<img class="instafeed-image" src="{{image}}" />',
+			resolution: 'standard_resolution',
+			after: function() {
+				setImages();
+		     },
 	    });
 		
 	    feed.run();
 		
+		
+		function setImages(){
+			
+			$('.instafeed-image').each(function(){
+				$(this).css('left', $(this).index() * 220);
+			});
+			
+		}
 };

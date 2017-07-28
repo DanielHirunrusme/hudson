@@ -7,8 +7,8 @@ email: daniel@halfhalf.us
 language: en
 role: admin
 history:
+  - projects/project-a
+  - projects/project-b
   - home
   - about/careers-talent
   - about
-  - about/studio
-  - projects/project-c

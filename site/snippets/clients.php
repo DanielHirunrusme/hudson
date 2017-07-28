@@ -1,5 +1,3 @@
-<h2 class="section-header header-no-margin">Selected Clients</h2>
-
 <ul class="teaser cf client-list">
 	<?php
 	if(page('about/clients')->hasImages()):

@@ -1,0 +1,31 @@
+Title: Home
+
+----
+
+Text: 
+
+#Gates is an integrated creative agency specializing in beauty, fashion and retail. We live to tell a brand story—stories that connect people with brands.
+
+(link: /projects text: View our Projects →)
+
+----
+
+About: 
+
+Gates is a team of creatives founded in 2014 by Cecilia Gates. Cecilia has 15+ years experience leading and developing in-house creative teams for global retail brands such as gap, sephora, loft, and most recently launching lou & grey for ann inc. We have an instinct and the experience for knowing what customers want, not just today, but tomorrow. 
+
+We believe you are the experts on you — we just help you see your brand differently. We partner with your in-house creative and marketing teams by providing the creative framework and direction to build the best brand possible. Think of us as your creative partners.
+
+We customize a unique plan for every project. We handpick the best in creative, copy, strategy, and production to suit you. We make it personal.
+
+----
+
+About-title: Who We Are
+
+----
+
+Careers-title: Careers & Talent
+
+----
+
+Careers: We are always looking for new talent and offer exciting opportunities to grow with our team. Please send all resumes to (link: info@gatescreative.com text: info@gatescreative.com)

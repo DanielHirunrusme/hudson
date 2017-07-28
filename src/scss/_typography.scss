@@ -6,6 +6,7 @@
 	@include font-size($p-font-sizes); 
 	@include line-height($p-line-height); 
 	color:$c-gray;
+	text-transform:uppercase;
 	
 }
 
@@ -39,7 +40,6 @@ span, time, a {
 
 a {
 	@extend .trans;
-	@extend %uc;
 	
 	color:$c-gray;
 	text-decoration:none;
@@ -115,11 +115,14 @@ content h1 {
  
 p {
 
-	letter-spacing:.01em !important; 
 	word-spacing:initial;
 	margin:0 auto;
-	
 	@extend %globalText;
+	
+}
+
+p, h2, a, div, span, input {
+	letter-spacing:.15em !important;
 }
 
 p {
@@ -144,8 +147,17 @@ h1, h2, h3, h4, h5, h6 {
 
 }
 
+
 h1 {
 	@extend %h1;
+}
+
+h2, .h2 {
+	@extend %globalText;
+}
+
+h1 .h2 {
+	margin-left:.5em;
 }
 
 img {
@@ -175,59 +187,12 @@ hr {
 	border-top:1px solid rgba(187, 187, 187, 0.4);
 }
 
-p {
-	margin-bottom:1em !important;
-}
 
 .headerLabel {
 	margin-top:30px;
 }
 
-/*
-h1 {
-	font-size:25px;
-	line-height:27px;
-	
-	@include break(ipad) { 
-		font-size:2.30769em;
-		line-height:40px;
-	} 
-	
-	@include break(laptop) { 
-		font-size:2.30769em;
-		line-height:40px;
-	} 
-	
-	@include break(desktop) { 
-		font-size:2.30769em;
-		line-height:40px;
-	} 
-}
-*/
 
-
-/*
-h2 {
-	text-transform:uppercase;
-	font-size:17px;
-	line-height:26px;
-	
-	@include break(ipad) { 
-		font-size:17px;
-		line-height:26px;
-	} 
-	
-	@include break(laptop) { 
-		font-size:17px;
-		line-height:26px;
-	} 
-	
-	@include break(desktop) { 
-		font-size:25px;
-		line-height:33px;
-	} 
-}
-*/
 
 .center {
 	text-align:center;

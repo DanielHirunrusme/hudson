@@ -1,7 +1,29 @@
 footer {
 	//@include flexbox;
 	//@include justify-content(space-between);
-	padding:$g-tb-margin*2 $g-lr-margin $g-tb-margin/2 $g-lr-margin;
+	padding:0 $g-lr-margin $g-tb-margin/2 $g-lr-margin;
+	text-align:center;
+	
+	div.footer-block {
+		margin-bottom:$g-tb-margin;
+		display:block;
+		
+		div {
+			margin-bottom:$g-tb-margin/4;
+			
+			h1 + h2 {
+				margin-left:.5em;
+			}
+			* {
+				display:inline-block;
+			}
+		}
+	}
+	
+	div.copyright-block {
+		margin-top:$g-tb-margin * 3;
+		margin-bottom:0;
+	}
 	
 	
 }

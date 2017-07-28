@@ -1,7 +1,7 @@
 section {
 	@include flexbox;
 	@include flex-direction(column);
-	padding:$g-tb-margin*2 $g-lr-margin $g-tb-margin*2 $g-lr-margin;
+	padding:$g-tb-margin*2 $g-lr-margin 0 $g-lr-margin;
 	
 	@include respond-to(mobile-portrait) {
 		padding:$g-tb-margin $g-lr-margin/2 $g-tb-margin $g-lr-margin/2;
