@@ -10,7 +10,9 @@
   <meta name="keywords" content="<?php echo $site->keywords()->html() ?>">
   
   <!-- CSS -->
+  <!--
   <link rel="stylesheet" type="text/css" href="//cloud.typography.com/6411154/613306/css/fonts.css">
+	  -->
   <?php echo css('assets/main.min.css') ?>
 
 </head>

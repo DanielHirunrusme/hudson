@@ -21,7 +21,7 @@ module.exports = function( el ) {
 			
 			console.log('body init');
 			
-			
+			 
 			$window.on('resize', winResize);
 		}
 		

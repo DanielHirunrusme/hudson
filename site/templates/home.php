@@ -13,16 +13,23 @@
 		
 		<div class="btn-section-container"><a href="<?php echo page('projects')->url() ?>" class="btn-section">All Projects →</a></div>
 	</section>
+
+
+	<section id="studio">
+		<article class="select-clients">
+			<h2>Clients</h2>
+			<?php snippet('clients') ?>
+		</article>
+		
+		<article class="home-about">
+			<h2><?php echo $page->about_title()->kirbytext() ?></h2>
+			<?php echo $page->about()->kirbytext() ?>
+		</article>
 	
-	<!--
-	<section class="home-about">
-		<?php snippet('about') ?>
-	</section>
-	-->
-	<hr/>
-	
-	<section class="select-clients">
-		<?php snippet('clients') ?>
+		<article class="home-careers">
+			<h2><?php echo $page->careers_title()->kirbytext() ?></h2>
+			<?php echo $page->careers()->kirbytext() ?>
+		</article>
 	</section>
 
   </main>

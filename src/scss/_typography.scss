@@ -2,20 +2,13 @@
 
 %globalText {
 	
-	font-family:'Gotham SSm A', 'Gotham SSm B', Helvetica, Arial, sans-serif;
-	
+	font-family:'graphik', Helvetica, Arial, sans-serif;
 	@include font-size($p-font-sizes); 
 	@include line-height($p-line-height); 
 	color:$c-gray;
+	
 }
 
-%heroText {
-	@include font-size($hero-font-sizes); 
-	@include line-height($hero-line-height); 
-	letter-spacing:.01em !important;
-	max-width:800px;
-	margin-bottom:1em;
-}
 
 
 
@@ -139,16 +132,20 @@ h1, h2, h3, h4, h5, h6 {
 	@include line-height($p-line-height); 
 }
 
+
 %h1 {
-	@include font-size($p-font-sizes); 
-	@include line-height($p-line-height); 
+	
+	font-family: 'gotham', Helvetica, Arial, sans-serif;
+	@include font-size($h1-font-sizes); 
+	@include line-height($h1-line-height); 
+	letter-spacing:.1em !important;
+	max-width:800px;
+
+
 }
 
 h1 {
-	@extend %uc;
-	//@extend %heroText;
-	font-size:.9em;
-	margin-bottom:1em !important;
+	@extend %h1;
 }
 
 img {

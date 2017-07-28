@@ -56,14 +56,14 @@ $p-font-sizes: (
   null  : 18px,
   $break-ipad : 18px,
   $break-laptop : 18px,
-  $break-desktop: 22px
+  $break-desktop: 10px
 );
 
 $p-line-height: (
   null  : 1.4,
   $break-ipad : 1.4,
   $break-laptop : 1.4,
-  $break-desktop: 1.4
+  $break-desktop: 20px
 );
 
 $hero-font-sizes: (
@@ -80,18 +80,18 @@ $hero-line-height: (
   $break-desktop: 35px
 );
 
-$h1-sizes: (
+$h1-font-sizes: (
   null  : 24px,
   $break-ipad : 24px,
   $break-laptop : 24px,
-  $break-desktop: 29px
+  $break-desktop: 12px
 );
 
 $h1-line-height: (
   null  : 30px,
   $break-ipad : 30px,
   $break-laptop : 30px,
-  $break-desktop: 35px
+  $break-desktop: 20px
 );
 
 @mixin line-height($fs-map) {

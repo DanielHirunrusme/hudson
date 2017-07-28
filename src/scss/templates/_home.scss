@@ -19,7 +19,6 @@
 	
 	h1 {
 		text-transform:none;
-		@extend %heroText;
 		color:$c-white;
 	    max-width: 680px;
 		

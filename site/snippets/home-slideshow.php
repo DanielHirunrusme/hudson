@@ -1,4 +1,4 @@
-<div class="home-slideshow" data-module-init="home-slideshow">
+<div class="home-slideshow">
 	
 	<?php
 		
