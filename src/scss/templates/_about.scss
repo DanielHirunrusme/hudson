@@ -1,0 +1,100 @@
+.default {
+    
+  .home-callout {
+    top:0;
+    height:100vh;
+    
+    .text {
+      position:relative;
+      padding:0;
+      left:0 !important;
+      background:transparent;
+      
+      h1, h1:first-child {
+        text-align:center;
+        margin-bottom:0;
+        color:$c-red;
+        
+        span {
+          color:$c-red;
+          
+        }
+        
+        span.underline {
+          background-color:$c-red;
+        }
+        
+        &:after {
+          display:none;
+        }
+      }
+      
+    }
+  
+  }
+  
+
+
+
+}
+
+.home-hero {
+  background-repeat:no-repeat;
+  background-size:cover;
+  
+  .default & {
+    height:150vh;
+  }
+}
+
+.page-container {
+  
+  .home-callout {
+    position:relative;
+    top:0;
+  }
+  //margin-top:100vh;
+  
+  .default & {
+    margin-top:0vh;
+  }
+  
+  //position:relative;
+}
+
+#services {
+  padding:$g-tb-margin * 3;
+}
+
+.service-list {
+  text-align:center;
+  margin:$g-tb-margin*3 0 0;
+  
+  ul {
+  
+    display:inline-block;
+    border-right:.02em solid $c-black;
+    padding:0 $g-lr-margin*2;
+    
+    &:last-child {
+      border-right:none;
+    }
+    
+    li {
+      @extend %small;
+      text-align:left;
+      text-transform:uppercase;
+      line-height:2em;
+      
+      
+      &.service-header {
+        @extend %globalText;
+        text-transform:none;
+        margin-bottom:1em;
+        letter-spacing:0 !important;
+      }
+    
+    }
+  }
+
+}

@@ -1,8 +1,26 @@
 footer {
 	//@include flexbox;
 	//@include justify-content(space-between);
-	padding:0 $g-lr-margin $g-tb-margin/2 $g-lr-margin;
+	//padding:0 $g-lr-margin 0 $g-lr-margin;
 	text-align:center;
+  //position:fixed;
+  bottom:0;
+  left:0;
+  width:100%;
+  background:$c-background;
+  padding:$g-tb-margin 0;
+  z-index:999;
+  
+  p, a {
+    margin:.5em 0 .7em 0;
+    @extend %small;
+  }
+  
+  i {
+    font-size: 1.3em !important;
+    position: relative;
+    top: .03em;
+  }
 	
 	div.footer-block {
 		margin-bottom:$g-tb-margin;

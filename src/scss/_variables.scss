@@ -3,7 +3,7 @@ $g-size:13px;
 $g-laptop-size:11px;
 $g-phone-size:12px;
 $g-mobileonly-size:4vw;
-$g-font:'akzidenz-m';
+$g-font:'graphik';
 
 //breakpoints
 $break-desktop:1441px;
@@ -13,16 +13,18 @@ $break-phone:767px;
 
 //animation
 $nav-transition-duration:1s;
-$transition-duration:.4s;
+$transition-duration:1.5s;
 $zoom-transition-duration:1.2s;
 $transition-timing-function: ease-out;
 $animation-speed: 0.2s;
 
+$max-width:1200px;
+
 //gutters+margins
 $padding:20px;
 
-$g-lr-margin:50px;
-$g-tb-margin:40px;
+$g-lr-margin:30px;
+$g-tb-margin:30px;
 
 $g-padding-v:10%;
 $g-padding-h:10%;
@@ -34,7 +36,7 @@ $g-v-padding:4vh;
 
 $c-white:#ffffff;
 $c-black:#000000; 
-$c-background:#F4F5F5;
+$c-background:#f3e0d6;
 $c-background-search:#e5e5e5;
 $c-gray:#353535;
 $c-dark-gray:#282924;
@@ -42,6 +44,7 @@ $c-orange:#BF6A49;
 $c-overlay-blue:#092647;
 $c-deactivated-text:#919191;
 $c-global:$c-dark-gray;
+$c-red: #e84a37;
 
 //font sizes
 $f-global-size:1em;
@@ -51,47 +54,124 @@ $f-mobileonly-size:3em;
 
 $f-name-mobileonly-size:7em;
 
+$small-font-sizes: (
+  null  : 11px,
+  $break-ipad : 11px,
+  $break-laptop : 11px,
+  $break-desktop: 11px
+);
+
+$small-line-height: (
+  null  : 1.6em,
+  $break-ipad : 1.6em,
+  $break-laptop : 1.6em,
+  $break-desktop: 1.6em
+);
+
 
 $p-font-sizes: (
-  null  : 18px,
-  $break-ipad : 18px,
-  $break-laptop : 18px,
-  $break-desktop: 10px
+  null  : 17px,
+  $break-ipad : 17px,
+  $break-laptop : 17px,
+  $break-desktop: 17px
 );
 
 $p-line-height: (
-  null  : 1.4,
-  $break-ipad : 1.4,
-  $break-laptop : 1.4,
-  $break-desktop: 20px
+  null  : 1.3em,
+  $break-ipad : 1.3em,
+  $break-laptop : 1.4em,
+  $break-desktop: 1.4em
 );
 
 $hero-font-sizes: (
-  null  : 24px,
-  $break-ipad : 24px,
-  $break-laptop : 24px,
-  $break-desktop: 30px
+  null  : 80px,
+  $break-ipad : 80px,
+  $break-laptop : 80px,
+  $break-desktop: 80px
 );
 
 $hero-line-height: (
-  null  : 30px,
-  $break-ipad : 30px,
-  $break-laptop : 30px,
-  $break-desktop: 35px
+  null  : 1em,
+  $break-ipad : 1em,
+  $break-laptop : 1em,
+  $break-desktop: 1em
 );
 
 $h1-font-sizes: (
-  null  : 24px,
-  $break-ipad : 24px,
-  $break-laptop : 24px,
-  $break-desktop: 12px
+  null  : 55px,
+  $break-ipad : 55px,
+  $break-laptop : 55px,
+  $break-desktop: 55px
 );
 
 $h1-line-height: (
-  null  : 30px,
-  $break-ipad : 30px,
-  $break-laptop : 30px,
-  $break-desktop: 20px
+  null  : 1em,
+  $break-ipad : 1em,
+  $break-laptop : 1em,
+  $break-desktop: 1em
+);
+
+$h2-font-sizes: (
+  null  : 17px,
+  $break-ipad : 17px,
+  $break-laptop : 17px,
+  $break-desktop: 17px
+);
+
+$h2-line-height: (
+  null  : 1em,
+  $break-ipad : 1em,
+  $break-laptop : 1em,
+  $break-desktop: 1em
+);
+
+$h3-font-sizes: (
+  null  : 18px,
+  $break-ipad : 18px,
+  $break-laptop : 18px,
+  $break-desktop: 18px
+);
+
+$h3-line-height: (
+  null  : 1.3em,
+  $break-ipad : 1.3em,
+  $break-laptop : 1.3em,
+  $break-desktop: 1.3em
+);
+
+$h4-font-sizes: (
+  null  : 14px,
+  $break-ipad : 14px,
+  $break-laptop : 14px,
+  $break-desktop: 14px
+);
+
+$h4-line-height: (
+  null  : 1em,
+  $break-ipad : 1em,
+  $break-laptop : 1em,
+  $break-desktop: 1em
+);
+
+$h5-font-sizes: (
+  null  : 53px,
+  $break-ipad : 53px,
+  $break-laptop : 53px,
+  $break-desktop: 53px
+);
+
+$h6-font-sizes: (
+  null  : 34px,
+  $break-ipad : 34px,
+  $break-laptop : 34px,
+  $break-desktop: 34px
+);
+
+$h6-line-height: (
+  null  : 1.1em,
+  $break-ipad : 1.1em,
+  $break-laptop : 1.1em,
+  $break-desktop: 1.1em
 );
 
 @mixin line-height($fs-map) {

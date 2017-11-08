@@ -16,6 +16,17 @@ for more information: http://getkirby.com/license
 */
 
 c::set('license', 'put your license key here');
+c::set('debug', true);
+c::set('panel.stylesheet', 'assets/css/panel.css');
+
+c::set('plg_masonry.enable', true);         // enable additional scripts
+//c::set('plg_masonry.lightbox', 'swipebox'); // swipebox, fancybox
+c::set('plg_masonry.width', 600);           // set a width for masonry images
+c::set('plg_masonry.quality', 90);
+c::set('plg_masonry.class');                // html class to be set
+c::set('plg_masonry.sizelimit', 1300);      // limit the source image size (long edge)
+c::set('plg_masonry.sort', 'title');        // sortBy parameter: sort, title, etc.
+c::set('plg_masonry.dir', 'desc');          // sortBy direction: asc, desc
 
 /*
 

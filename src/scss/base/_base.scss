@@ -6,6 +6,7 @@ body, html {
 body {
 	background-color:$c-background;
 	@include transition(background-color .8s)
+  overflow-x:hidden;
 
 }
 

@@ -6,6 +6,19 @@ fields:
   title:
     label: Title
     type:  text
-  text:
-    label: Text
-    type:  textarea
+  builder:
+    label: Project Column
+    type: builder
+    fieldsets:
+      projectcategory:
+        label: Project Column
+        type: text
+        fields:
+          projectcategoryprojects:
+            label: Projects 
+            type: relationship
+            options: query
+            query:
+              page: work
+              fetch: children
+            search: true

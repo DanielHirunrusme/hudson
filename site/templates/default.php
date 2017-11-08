@@ -1,29 +1,74 @@
 <?php snippet('header') ?>
 
-  <main class="main" role="main" data-template="page">
+  <main class="main page-template" data-template="home" role="main">
 
-    <section class="text <?php if($page->uri() == 'about'): ?> about-text-section<?php endif; ?>">
-      <?php echo $page->text()->kirbytext() ?>
-   
+    
+    
+    <div class="text home-hero">
+      
+  	  <?php snippet('about-header') ?>
+    
+      <div class="home-callout" data-module-init="callout">
+        <div class="text">
+          <h1 class="line-header hero"><span>Our</span><span class="underline"></span><span>Work</span></h1>
+        </div>
+      </div>
+      <!-- /home-callout -->
+    
+    </div>
+    <!-- /home-hero -->
+    
+    
 	
-	<?php if($page->uri() == 'about'): ?>
-	<?php foreach($page->children()->visible() as $p):?>
-	<?php if($p->uri() != 'about/clients'): ?>
-		<div class="about-text">
-			<?php echo $p->text()->kt(); ?>
-		</div>
-	<?php endif; ?>
+	<div class="page-container">
+    
+    
+      <section id="services">
+        <h6>Beginning to end.<br>Research. Strategize. Concept. Design. Execute.</h6>
+        <div class="service-list">
+          <ul>
+            <li class="service-header">Advertising</li>
+            <li>360 advertising campaigns</li>
+            <li>New Brand Initiatives<li>
+            <li>Experiential Marketing<li>
+            <li>Brand Collaborations<li>
+          </ul>
+          <ul>
+            <li class="service-header">Digital</li>
+            <li>INNOVATIVE DIGITAL SITE EXPERIENCES<li>
+            <li>DIGITAL EDITORIAL CONTENT + CREATION<li>
+            <li>INFLUENCER MARKETING<li>
+            <li>VIDEO<li> 
+          </ul>
+          <ul>
+            <li class="service-header">Print</li>
+            <li>Print Collateral<li>
+            <li>In-Store Experience<li>
+            <li>Branding + Identity<li>
+            <li>Packaging<li>
+          </ul>
+        </div>
+      </section>
+
+     
+      <a href="<?= $pages->find('work')->url() ?>">
+      <section id="work-callout" class="page-callout footer-callout">
+        <div class="inner-container">
+          <h1 class="line-header hero"><span>Our</span><span class="underline"></span><span>Work</span></h1>
+        </div>
+        
+      </section>
+      </a>
+      
+    </div>
 	
-	
-	<?php endforeach; ?>
-	 </section>
-	<hr />
-	<section class="select-clients">
-		<?php snippet('clients') ?>
-	</section>
-	
-	<?php endif; ?>
+  
+  
+  
+  
 
   </main>
-
+	
+    
+    
 <?php snippet('footer') ?>

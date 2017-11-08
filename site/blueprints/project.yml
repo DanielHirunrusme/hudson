@@ -6,15 +6,78 @@ fields:
   title:
     label: Title
     type:  text
+  subtitle:
+    label: Subtitle
+    type:  text
+    width: 3/4
   year:
     label: Year
-    type:  text
+    type:  date
+    width: 1/4
   text:
     label: Text
-    type:  textarea
+    type:  markdown
   credits:
     label: Credits
-    type:  textarea
+    type:  markdown
+  builder:
+      label: Sections
+      type: builder
+      fieldsets:
+        bodytext:
+          label: Text Banner
+          snippet: sections/textbanner
+          fields:
+            text:
+              label: text
+              type: markdown
+        imageBanner:
+          label: Image Banner
+          snippet: sections/imagebanner
+          fields:
+            picture:
+              label: Background Image
+              type: image
+            text:
+              label: Caption Text
+              type: markdown
+        singleimage:
+          label: Single Image
+          snippet: sections/singleimage
+          fields:
+            picture:
+              label: Image
+              type: image
+            text:
+              label: Caption Text
+              type: markdown
+        imageWithText:
+          label: 2-Up Image and Text
+          snippet: sections/imagewithtext
+          fields:
+            picture:
+              label: Image
+              type: image
+            text:
+              label: Text
+              type: markdown
+        videoBanner:
+          label: Video Banner
+          snippet: sections/videobanner
+          fields:
+            video:
+              label: Video
+              type: embed
+            text:
+              label: Caption Text
+              type: markdown
+        paragraph:
+          label: Paragraph
+          snippet: sections/paragraph
+          fields:
+            text:
+              label: Text
+              type: markdown
   tags:
     label: Tags
     type:  tags

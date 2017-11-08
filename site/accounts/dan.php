@@ -7,8 +7,8 @@ email: daniel@halfhalf.us
 language: en
 role: admin
 history:
-  - projects/project-a
-  - projects/project-b
-  - home
-  - about/careers-talent
-  - about
+  - work/project-a-2
+  - work/covsser-fx222ss
+  - work/cover-fx222
+  - work/cover-fxasdasd2
+  - work/cover-fx

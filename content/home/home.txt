@@ -4,9 +4,13 @@ Title: Home
 
 Text: 
 
-#Gates is an integrated creative agency specializing in beauty, fashion and retail. We live to tell a brand story—stories that connect people with brands.
-
-(link: /projects text: View our Projects →)
+#Think New. 
+#We are a company
+#of creatives that immerse
+#ourselves in your
+#brand. We have a new approach.
+#We are small
+#we have enormous vision.
 
 ----
 

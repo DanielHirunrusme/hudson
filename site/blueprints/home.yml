@@ -4,6 +4,9 @@ fields:
   title:
     label: Title
     type:  text
+  text:
+    label: Title
+    type:  textarea
   line-a:
       type: line
   about_title:

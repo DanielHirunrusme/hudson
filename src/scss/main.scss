@@ -1,5 +1,6 @@
-@import "_variables";
 @import "helpers";
+@import "variables";
+@import "normalize";
 @import "breakpoint";
 @import "fonts";
 @import "typography";
@@ -10,7 +11,7 @@
 @import "base/layout";
 @import "base/background";
 @import "base/base";
-@import "base/normalize";
+
 @import "base/container";
 
 //modules
@@ -23,22 +24,9 @@
 @import "modules/section";
 
 //templates
-@import "templates/title-screen";
+@import "templates/about";
 @import "templates/home";
-@import "templates/blog";
 @import "templates/project";
 @import "templates/information";
 
 //partials
-@import "partials/captions";
-@import "partials/clients";
-@import "partials/instagram-module";
-@import "partials/menu";
-@import "partials/mobile-menu";
-/*
-@import "partials/main-menu";
-@import "partials/brand-menu";
-@import "partials/projects-menu";
-@import "partials/studio-menu";
-@import "partials/video";
-*/

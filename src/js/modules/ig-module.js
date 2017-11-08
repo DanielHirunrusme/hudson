@@ -1,4 +1,4 @@
-var Instafeed = require("instafeed.js");
+//var Instafeed = require("instafeed.js");
 
 
 module.exports = function( el ) {

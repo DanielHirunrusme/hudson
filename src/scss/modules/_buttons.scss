@@ -40,15 +40,18 @@
 
 
 .btn-section {
-	padding:1em 2em;
-	border:1px solid #bbb;
+	//padding:1em 2em;
+	//border:1px solid #bbb;
+  margin-bottom:100px;
+  @extend %h2;
+  border-bottom:.02em solid $c-black;
 	
 	&:hover {
-		border:1px solid $c-gray;
+		//border:1px solid $c-gray;
 	}
 }
 
 .btn-section-container {
 	text-align:center;
-	margin:$g-tb-margin 0 1em 0;
+	margin:$g-tb-margin 0 $g-tb-margin * 3 0;
 }

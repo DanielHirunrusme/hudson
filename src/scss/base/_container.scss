@@ -1,5 +1,11 @@
-main {
+.main {
 	min-height:86%;
 	//height:100%;
 	//margin-top:$g-tb-margin * 2;
+  //padding-bottom:$g-tb-margin * 4;
+  
+  &>*:last-child {
+    background:$c-background;
+    padding-bottom:$g-tb-margin * 4;
+  }
 }

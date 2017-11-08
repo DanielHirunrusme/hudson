@@ -1,5 +1,5 @@
 .logo {
-	@extend %h1;
+	//@extend %h1;
 	padding-left:$g-lr-margin;
 	padding-top:$g-tb-margin/2;
 	display:block;
@@ -19,10 +19,10 @@ nav {
 			display:inline-block;
 			
 			a {
-				@extend %h1;
+				//@extend %h1;
 				padding-top:$g-tb-margin/2;
 				display:block;
-				margin-left:$g-lr-margin/3;
+				//margin-left:$g-lr-margin/3;
 				padding-bottom:$g-tb-margin/2;
 			}
 		}

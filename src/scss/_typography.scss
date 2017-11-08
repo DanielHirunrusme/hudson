@@ -1,17 +1,12 @@
-
-
 %globalText {
 	
 	font-family:'graphik', Helvetica, Arial, sans-serif;
 	@include font-size($p-font-sizes); 
 	@include line-height($p-line-height); 
 	color:$c-gray;
-	text-transform:uppercase;
+	//text-transform:uppercase;
 	
 }
-
-
-
 
 %containerPadding {
 	padding:$g-tb-margin $g-lr-margin;
@@ -24,7 +19,7 @@ body {
 }
 
 b, strong {
-	font-weight:normal !important;
+	//font-weight:normal !important;
 }
 
 h1, h2, h3, h4, h5, h6, p, a, select, input, label, textarea, span, time {
@@ -32,6 +27,14 @@ h1, h2, h3, h4, h5, h6, p, a, select, input, label, textarea, span, time {
 	letter-spacing: initial !important;
 	word-spacing:initial;
 	color:$c-gray;
+}
+
+p a {
+  @include opacity(.6);
+  
+  &:hover {
+    @include opacity(1);
+  }
 }
 
 span, time, a {
@@ -71,18 +74,13 @@ a, a:active, a:focus, input:focus {
 	outline: none !important;
 }
 
-::-moz-selection { /* Code for Firefox */
-    color: $c-black;
-    background: $c-global;
-}
-
-::selection {
-    color: $c-global;
-    background: $c-gray;
+small {
+  @extend %small;
 }
 
 li {
 	list-style:none;
+  line-height:1.5em;
 }
 
 address {
@@ -114,15 +112,13 @@ content h1 {
 }
  
 p {
-
 	word-spacing:initial;
 	margin:0 auto;
 	@extend %globalText;
-	
 }
 
 p, h2, a, div, span, input {
-	letter-spacing:.15em !important;
+	letter-spacing:.02em !important;
 }
 
 p {
@@ -138,30 +134,127 @@ h1, h2, h3, h4, h5, h6 {
 
 %h1 {
 	
-	font-family: 'gotham', Helvetica, Arial, sans-serif;
+	font-family: 'graphik', Helvetica, Arial, sans-serif;
 	@include font-size($h1-font-sizes); 
 	@include line-height($h1-line-height); 
-	letter-spacing:.1em !important;
-	max-width:800px;
-
-
+	letter-spacing:.0em !important;
+	//max-width:800px;
 }
 
+%h1-hero {
+	
+	font-family: 'graphik', Helvetica, Arial, sans-serif;
+	@include font-size($hero-font-sizes); 
+	@include line-height($hero-line-height); 
+	letter-spacing:.0em !important;
+	//max-width:800px;
+}
+
+%h2 {
+	font-family: 'graphik', Helvetica, Arial, sans-serif;
+	@include font-size($h2-font-sizes); 
+	@include line-height($h2-line-height); 
+	letter-spacing:.0em !important;
+}
+
+%h3 {
+	font-family: 'baskerville_italic', 'baskerville', 'Gerogia', 'Times New Roman', Times, sans-serif;
+	@include font-size($h3-font-sizes); 
+	@include line-height($h3-line-height); 
+	letter-spacing:.0em !important;
+  font-style:italic;
+}
+
+
+%h4 {
+	font-family: 'baskerville_italic', 'Georgia', 'Times New Roman', Times, sans-serif;
+	@include font-size($h4-font-sizes); 
+	@include line-height($h4-line-height); 
+	letter-spacing:.0em !important;
+  font-style:italic;
+}
+
+%h5 {
+	font-family: 'baskerville_italic', 'baskerville', 'Georgia', 'Times New Roman', Times, sans-serif;
+	@include font-size($h5-font-sizes); 
+	@include line-height($h4-line-height); 
+	letter-spacing:.0em !important;
+  font-style:italic;
+}
+
+%h6 {
+	font-family: 'graphik', Helvetica, Arial, sans-serif;
+	@include font-size($h6-font-sizes); 
+	@include line-height($h6-line-height); 
+	letter-spacing:.0em !important;
+}
+
+%small {
+	font-family: 'graphik', Helvetica, Arial, sans-serif;
+	@include font-size($small-font-sizes); 
+	@include line-height($small-line-height); 
+	letter-spacing:.1em !important;
+  text-transform:uppercase;
+}
 
 h1 {
 	@extend %h1;
 }
 
-h2, .h2 {
-	@extend %globalText;
+h1.hero {
+	@extend %h1-hero;
 }
 
-h1 .h2 {
-	margin-left:.5em;
+h2 {
+  @extend %h2;
+}
+
+h3 {
+  @extend %h3;
+}
+
+h4 {
+  @extend %h4;
+}
+
+h5 {
+  @extend %h5;
+  text-align:center;
+}
+
+h6 {
+  @extend %h6;
+  text-align:center;
+}
+
+.line-header {
+  text-align:center;
+  
+  margin-bottom:$g-tb-margin;
+  
+  span {
+    display:inline-block
+  
+  }
+
+}
+
+.underline {
+  
+  height:.02em;
+  background-color:$c-black;
+  width:1em;
+  display:block;
+  min-height:1px;
+  
+  h1.hero & {
+    width:2em;
+  }
 }
 
 img {
 	width:100%;
+  height:auto;
 }
 
 .read-more {
@@ -177,22 +270,19 @@ img {
 
 .section-header {
 	//@extend %heroText;
-	@extend %uc;
+	//@extend %uc;
+  text-align:center;
 	margin-bottom:$g-tb-margin;
 }
-
 
 hr {
 	border:none;
 	border-top:1px solid rgba(187, 187, 187, 0.4);
 }
 
-
 .headerLabel {
 	margin-top:30px;
 }
-
-
 
 .center {
 	text-align:center;
@@ -205,7 +295,6 @@ hr {
 	@include font-size($p-font-sizes); 
 	@include line-height($p-line-height); 
 }
-
 
 .mobile-break {
 	display:none !important;

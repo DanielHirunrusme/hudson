@@ -1,22 +1,82 @@
+#masonry {
+  overflow: hidden;
+  width:100%;
+  padding: 50px 0;
+}
+#masonry ul {
+  width: 100%;
+}
+#masonry li {
+  float: left;
+  list-style: none;
+  width: 33.333%;
+  line-height: 0;
+}
+
+
+
+
+
+
+
 .project {
 	//background:$c-white;
+  
+  .description {
+    small {
+      padding-top:1em;
+      display:block;
+    }
+  }
+  small {
+    margin-top:1em;
+  }
+  
+  .text {
+    max-width:$max-width;
+    margin:0 auto;
+    width:100%;
+    position:relative;
+    
+    .project-header {
+      position:absolute;
+      top:0;
+      left:0;
+      
+    }
+    
+    .description {
+      
+      width:60%;
+    
+    }
+  }
+  
+  figure {
+    max-width:$max-width;
+    margin:0 auto;
+   
+  
+  }
 }
 
 .projects {
+  
+  .latest-projects {
+    margin-top:6px;
+  }
+  
 	.page-template {
 		li {
-			margin-bottom:$g-tb-margin * 2;
-			float:left;
+			//margin-bottom:$g-tb-margin * 2;
+			//float:left;
 			
 			h3 {
-				float:left;
+				//float:left;
 			}
 			
 			p {
-				float:right;
-				width:50%;
-				width:calc(50% - $g-lr-margin);
-				max-width:680px;
+			
 				
 				@include respond-to(mobile-portrait) {
 					width:100%;
@@ -24,7 +84,7 @@
 			}
 			
 			img {
-				margin-bottom:1em;
+				//margin-bottom:1em;
 			}
 		}
 	}
@@ -32,18 +92,72 @@
 }
 
 .projects-container {
+  
+  .inner-grid-item {
+    margin:0 3px;
+    margin-bottom:1.305em;
+    
+    p {
+      margin-top:.5em;
+    }
+    
+    a {
+      overflow:hidden;
+      
+      img {
+        @include transition(10s transform);
+        display:block;
+      }
+      
+      &:hover {
+        img {
+          @include transform(scale(1.1));
+        }
+      }
+    }
+  }
+  
+  .grid-item {
+    //transition-duration:0s !important;
+  }
+  
 	ul {
 		
-		@include flexbox;
-		@include flex-wrap(wrap);
-		@include justify-content(space-between);
+
+
+    margin-right:-19px;
+    margin-left:-3px;
 		//width:100%;
 		//padding:0 $g-lr-margin/2;
 		
 		li {
-			margin-bottom:$g-tb-margin*2;
-			float:left;
-			width:calc(50% - 25px);
+			margin-bottom:$g-tb-margin;
+ 
+      
+      
+      &:after {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        z-index: 5000;
+        transform: translate(-50%, -50%);
+        counter-increment: brick;
+       
+        transition: font-size .25s, opacity .25s ease-in-out;
+        font-weight: 700;
+        opacity: .5;
+        font-size: 1.25em;
+      }
+      
+      
+      
+      div div {
+        margin:0 3px;
+      
+      
+      }
+      
+      
 			
 			@include respond-to(mobile-portrait) {
 				width:100%;
@@ -54,15 +168,20 @@
 					@include opacity(1);
 				}
 			}
+      
+      p {
+        margin-top:.2em;
+      }
 			
 			h1 {
-				margin-top:$g-tb-margin/2;
+				margin-top:$g-tb-margin;
 				position:relative;
 				top:-6px;
 			}
 			
 			h3 {
-				margin-top:1em;
+        font-style:italic;
+				//margin-top:$g-tb-margin/3;
 			}
 			
 			a.image-link {
@@ -87,6 +206,7 @@
 	.text {
 		
 		margin-bottom:$g-tb-margin*4;
+    
 		
 		h1 {
 			margin-bottom:1em;
@@ -99,10 +219,10 @@
 			}
 		}
 		.description {
-			max-width:680px;
+			max-width:800px;
 			float:right;
 			width:50%;
-			width:calc(50% - 25px);
+			//width:calc(50% - 25px);
 			
 			@include respond-to(mobile-portrait) {
 				width:100%;
@@ -115,7 +235,7 @@
 			ul {
 				margin-top:1em;
 				li {
-					@extend %uc;
+					//@extend %uc;
 				}
 			}
 			
@@ -123,7 +243,7 @@
 	}
 	
 	figure {
-		margin-bottom:$g-tb-margin*2;
+		margin-bottom:$g-tb-margin;
 		
 		&:last-child {
 			margin-bottom:0;
@@ -184,4 +304,210 @@
 		}
 	}
 	
+}
+
+.credits {
+  margin-top:1em;
+  display:block;
+  
+  p {
+  @extend %small;
+  }
+}
+ 
+.description, .project-section-text {
+  h1, h2 {
+    @extend %h3;
+    display:block;
+    float:none !important;
+    margin-bottom:1em;
+  } 
+}
+
+
+.projects {
+  .latest-projects:last-child {
+    padding-top:0;
+  }
+
+}
+
+.project-section-text {
+  max-width:1200px;
+  margin:0 auto;
+  text-align:left;
+  width:100%;
+  //padding:0 $g-lr-margin;
+  
+  p {
+    text-align:left;
+    margin:0;
+    padding:0;
+    width:100%;
+  }
+}
+
+.videoBanner {
+  //max-height:50vh;
+  figure {
+    padding-top:50% !important;
+  }
+}
+
+.imageBanner, .videoBanner {
+  .project-section-text {
+    padding:0 $g-lr-margin;
+  }
+}
+
+#project-footer {
+  @include flexbox;
+  width:100%;
+  @include justify-content(space-between);
+  @include flex-direction(row);
+  max-width:$max-width;
+  margin:0 auto;
+  margin-bottom:0;
+  padding-bottom:0;
+  padding-top:0;
+
+}
+
+
+.footer-nav {
+  @include flexbox;
+  @include align-items(center);
+  //margin-left:-1em;
+  //margin-right:-1em;
+  
+  .line {
+    height:.05em;
+    background-color:$c-black;
+    width:3em;
+    display:inline-block;
+    position:relative;
+    top:.01em; margin-top:.05em;
+    //margin-left:1em;
+    //margin-right:1em;
+    
+  }
+  
+  .footer-text {
+    margin:0 1em;
+  }
+
+}
+
+
+
+.box-item {
+    margin: 0px;
+}
+
+
+.grid {
+  margin-left:-3px;
+  margin-right:-3px;
+}
+
+/* clear fix */
+.grid:after {
+  content: '';
+  display: block;
+  clear: both;
+}
+
+/* ---- .grid-item ---- */
+
+.grid-item {
+  width: 33.333%;
+  text-align:center;
+}
+
+.grid-item {
+  float: left;
+}
+
+.grid-item img {
+  display: block;
+  max-width: 100%;
+}
+
+
+
+
+
+
+/*
+* 
+*   IMAGE TEMPLATES
+*
+*/
+
+.singleImage, .paragraph, .imageWithText {
+  padding:0 $g-lr-margin;
+  max-width:1200px;
+  margin: 0 auto;
+}
+
+.imageWithText {
+  @include flexbox;
+  @include flex-direction(row);
+  
+  .img, .txt {
+    width:50%;
+  }
+  
+}
+
+.videoBanner {
+  display:block;
+  
+  figure {
+    max-width:100%;
+    width:100%;
+  }
+}
+
+.singleImage, .videoBanner, .imageBanner {
+.project-section-text {
+  p {
+    @extend %small;
+  }
+}
+}
+
+.paragraph {
+  .project-section-text {
+    padding:0;
+  }
+}
+
+.imageWithText {
+  .img {
+    width:50%;
+  }
+  
+  .project-section-text {
+    width:50%;
+  }
+}
+
+.project-section {
+  margin-bottom:$g-tb-margin;
+  padding-top:0;
+}
+
+.imageBanner, .videoBanner {
+  figure {
+    margin:0 auto;
+    
+  }
+  
+  p {
+   
+    text-align:left;
+    margin:0;
+    margin-top:.5em;
+  }
 }

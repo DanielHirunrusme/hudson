@@ -12,64 +12,83 @@
     <section>
       
 	  <div class="text">
-	  	<h1 class="section-header"><?php echo $page->title()->html() ?></h1>
+      <div class="project-header">
+	  	  <p><?php echo $page->title()->html() ?></p>
+        <h3><?php echo $page->subtitle()->html() ?></h3>
+      </div>
 	  	
 		<div class="description">
 	  		<?php echo $page->text()->kirbytext() ?>
-	        <ul class="meta cf">
-	          <li><b>Tags:</b> <?php echo $page->tags() ?></li>
-	        </ul>
+	      <span class="credits"><?php echo $page->credits()->kt() ?></span>
 		</div>
-  	  </div>
-	  
-	  
-      <?php foreach($page->images()->sortBy('sort', 'asc') as $image): ?>
-      <figure>
-        <img src="<?php echo $image->url() ?>" alt="<?php echo $page->title()->html() ?>">
-      </figure>
-      <?php endforeach ?>
-	  
-	  
-	  
-      
-	  
-    </section>
-	
+  	</div>
     
-	
-	<hr/>
-	
-	<section class="next-projects">
-    <nav class="other-projects cf" role="navigation">
-      <?php if($prev = $page->prevVisible()): ?>
-	  <div class="prev other-project-container">
-	      <?php if($image = $prev->images()->sortBy('sort', 'asc')->first()): ?>
-	      <a class="image-link" href="<?php echo $prev->url() ?>">
-	        <img src="<?php echo $image->url() ?>" alt="<?php echo $prev->title()->html() ?>" >
-	      </a>
-	      <?php endif; ?>
+    </section>
+    
+  <?php foreach($page->builder()->toStructure() as $section): ?>
+    
+    <?php snippet('sections/' . $section->_fieldset(), array('data' => $section)) ?>
+  <?php endforeach ?>
 
-	      <h3><a href="<?php echo $prev->url() ?>"><?php echo $prev->title()->html() ?></a></h3>
-	      <p><?php echo $prev->text()->excerpt(100) ?> <a href="<?php echo $prev->url() ?>" class="read-more">View Project&nbsp;&nbsp;→</a></p>
-		  
-  	  </div>
+  
+  <section id="project-footer">
+    
+      <?php if($prev = $page->prevVisible()): ?>
+        <a href="<?= $prev->url()?>" class="footer-nav"><span class="line"></span><span class="footer-text">Prev Project</span></a>
+      <?php else: ?>
+        <a href="<?= $pages->find('work')->url()?>" class="footer-nav"><span class="line"></span><span class="footer-text">Work</span></a>
       <?php endif ?>
-      <?php if($next = $page->nextVisible()): ?>
-		  <div class="next other-project-container">
-		      <?php if($image = $next->images()->sortBy('sort', 'asc')->first()): ?>
-		      <a class="image-link" href="<?php echo $next->url() ?>">
-		        <img src="<?php echo $image->url() ?>" alt="<?php echo $next->title()->html() ?>" >
-		      </a>
-		      <?php endif; ?>
-	
-		      <h3><a href="<?php echo $next->url() ?>"><?php echo $next->title()->html() ?></a></h3>
-		      <p><?php echo $next->text()->excerpt(100) ?> <a href="<?php echo $next->url() ?>" class="read-more">View Project&nbsp;&nbsp;→</a></p>
-    		  
-	  	  </div>
-      <?php endif ?>
-    </nav>
-	</section>
-	
+    
+    
+     <?php if($next = $page->nextVisible()): ?>
+    <a href="<?php echo $next->url() ?>" class="footer-nav"><span class="footer-text">Next Project</span><span class="line"></span></a>
+    <?php endif; ?>
+    
+  </section>
+  
   </main>
+  
+  <script type="text/javascript">
+   
+    var tag = document.createElement('script');
+      tag.src = "https://www.youtube.com/player_api";
+      var firstScriptTag = document.getElementsByTagName('script')[0];
+      firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+    
+    function onYouTubeIframeAPIReady() {
+      console.log('youtube player ready')
+      
+      $('iframe').each(function(){
+        var index = $(this).closest('section').index();
+        $(this).attr('id', 'video-player-' + index);
+        var id = $(this).attr('id');
+        var player;
+        player = new YT.Player('video-player-'+index, {
+            events: {
+              'onReady': function(){
+                console.log('mute player')
+                player.mute();
+                player.playVideo();
+              },
+              'onStateChange': 
+                  function(e){
+                      if (e.data === YT.PlayerState.ENDED) {
+                          player.playVideo(); 
+                      }
+                  }
+            }
+        });
+        
+      });
+      
+        
+    }
+
+    function onPlayerReady(event) {
+        player.mute();
+        player.playVideo();
+    }
+      
+  </script>
 
 <?php snippet('footer') ?>

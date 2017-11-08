@@ -1,8 +1,5 @@
 var settings = require( "modules/settings" ),
-	throttle = require("modules/throttle"),
-	menu = require("modules/menu"),
-	footer = require("modules/footer"),
-	barba = require("modules/barba")
+throttle = require("modules/throttle");
 
 	
 module.exports = function( el ) {
@@ -15,9 +12,9 @@ module.exports = function( el ) {
  
 		function init(){
 			
-			barba.init();
-			menu.init();
-			footer.init();
+			//barba.init();
+			//menu.init();
+			//footer.init();
 			
 			console.log('body init');
 			
